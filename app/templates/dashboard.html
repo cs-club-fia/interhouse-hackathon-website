@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="glass">
+    <div class="header">Welcome, {{ username }}</div>
+    <div class="status">Your Progress</div>
+    {% for q in questions %}
+    <div class="question-status" style="margin: 10px 0; padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.2);">
+        <span style="font-weight: bold;">{{ q|capitalize }}:</span>
+        {% if submitted[q] %}
+            <span style="color: #27ae60;">✓ Completed</span>
+        {% elif current_question == q %}
+            <form method="get" action="/question" style="display: inline;">
+                <input type="hidden" name="qname" value="{{ q }}">
+                <button type="submit" style="width: auto; padding: 5px 15px; margin: 0 0 0 10px;">Continue</button>
+            </form>
+        {% elif not current_question and loop.first %}
+            <form method="get" action="/question" style="display: inline;">
+                <input type="hidden" name="qname" value="{{ q }}">
+                <button type="submit" style="width: auto; padding: 5px 15px; margin: 0 0 0 10px;">Start</button>
+            </form>
+        {% else %}
+            <span style="color: #7f8c8d;">Locked</span>
+        {% endif %}
+    </div>
+    {% endfor %}
+    <form method="post" action="/logout" style="margin-top: 20px;">
+        <button type="submit">Logout</button>
+    </form>
+</div>
+{% endblock %}

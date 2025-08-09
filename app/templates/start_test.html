@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="glass">
+    <div class="header">Welcome to the Hackathon, {{ username }}</div>
+    <div class="status" style="text-align: left; margin: 20px 0;">
+        <p>Important Information:</p>
+        <ul style="list-style-type: none; padding: 0;">
+            <li>• You will have 5 programming questions</li>
+            <li>• Each question has its own timer</li>
+            <li>• Once started, you cannot pause the test</li>
+            <li>• Submit .py files only</li>
+        </ul>
+    </div>
+    <form method="get" action="/question">
+        <input type="hidden" name="qname" value="question1">
+        <button type="submit" class="start-button">Start Test</button>
+    </form>
+</div>
+{% endblock %}

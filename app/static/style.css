@@ -1,0 +1,92 @@
+/* Glassmorphism Modern UI */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.glass {
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+.header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.timer {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+input, button, select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+button {
+    background: linear-gradient(90deg, #a8edea, #fed6e3);
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: linear-gradient(90deg, #fed6e3, #a8edea);
+}
+.status {
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: #fffbe6;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.admin-stats {
+    background: rgba(255,255,255,0.35);
+    box-shadow: 0 4px 16px 0 rgba(31,38,135,0.17);
+    border-radius: 16px;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 700px;
+}
+.start-button {
+    background: #27ae60 !important;
+    color: white !important;
+    font-size: 1.2rem;
+    padding: 1rem !important;
+    margin-top: 20px;
+}
+.question-status {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+.question-status:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+@media (max-width: 600px) {
+    .glass, .admin-stats {
+        max-width: 95vw;
+        padding: 1rem;
+    }
+    .header {
+        font-size: 1.3rem;
+    }
+}

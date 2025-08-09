@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="glass">
+    <div class="header">School Hackathon Login</div>
+    <form method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    {% if error %}<div class="status">{{ error }}</div>{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="glass">
+    <div class="header">Final Review</div>
+    <div class="status">Test Completion Summary</div>
+    
+    {% for qname, details in submissions.items() %}
+    <div class="question-status" style="margin: 15px 0; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.2);">
+        <span style="font-weight: bold;">Question {{ qname[-1] }}:</span>
+        {% if details.submitted %}
+            <span style="color: #27ae60;">✓ Submitted{% if details.time %} at {{ details.time }}{% endif %}</span>
+        {% else %}
+            <span style="color: #e74c3c;">✗ Not attempted</span>
+        {% endif %}
+    </div>
+    {% endfor %}
+    
+    <form method="post" action="{{ url_for('logout') }}" style="margin-top: 20px;">
+        <button type="submit">Finish & Logout</button>
+    </form>
+</div>
+{% endblock %}

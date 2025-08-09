@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="glass">
+    <div class="header">{{ qname|capitalize }}</div>
+    <div class="status">Time left: <span id="timer">{{ time_left }}</span></div>
+    <div class="status">{{ question_text }}</div>
+    <form id="submitForm" method="post" enctype="multipart/form-data">
+        <input type="file" name="answer" accept=".py" id="fileInput" required>
+        <button type="button" id="submitBtn" style="background:#27ae60;color:#fff;">Submit Answer</button>
+    </form>
+    {% if error %}<div class="status">{{ error }}</div>{% endif %}
+    
+    <!-- File Missing Modal -->
+    <div id="fileMissingModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:1000;align-items:center;justify-content:center;">
+      <div style="background:rgba(255,255,255,0.95);border-radius:16px;padding:2rem;box-shadow:0 4px 32px rgba(31,38,135,0.37);max-width:350px;margin:auto;text-align:center;">
+        <div style="font-size:1.2rem;margin-bottom:1rem;color:#e74c3c;">Please upload a Python (.py) file first!</div>
+        <button id="backBtn" style="background:#95a5a6;color:#fff;padding:0.5rem 1.5rem;border:none;border-radius:8px;font-weight:bold;">Back</button>
+      </div>
+    </div>
+
+    <!-- Submit Confirmation Modal -->
+    <div id="confirmModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:1000;align-items:center;justify-content:center;">
+      <div style="background:rgba(255,255,255,0.95);border-radius:16px;padding:2rem;box-shadow:0 4px 32px rgba(31,38,135,0.37);max-width:350px;margin:auto;text-align:center;">
+        <div style="font-size:1.2rem;margin-bottom:1rem;color:#333;">Are you sure you want to submit? You cannot access this question again.</div>
+        <button id="confirmYes" style="background:#27ae60;color:#fff;padding:0.5rem 1.5rem;margin-right:1rem;border:none;border-radius:8px;font-weight:bold;">Yes, I'm Sure. Submit</button>
+        <button id="confirmNo" style="background:#e74c3c;color:#fff;padding:0.5rem 1.5rem;border:none;border-radius:8px;font-weight:bold;">No, go back</button>
+      </div>
+    </div>
+</div>
+<script>
+    window.onload = function() {
+        var duration = {{ time_left }};
+        var display = document.getElementById('timer');
+        startTimer(duration, display, function(){
+            display.style.background = '#fffbe6';
+        });
+
+        // File validation and modal logic
+        var submitBtn = document.getElementById('submitBtn');
+        var fileInput = document.getElementById('fileInput');
+        var fileMissingModal = document.getElementById('fileMissingModal');
+        var confirmModal = document.getElementById('confirmModal');
+        var backBtn = document.getElementById('backBtn');
+        var confirmYes = document.getElementById('confirmYes');
+        var confirmNo = document.getElementById('confirmNo');
+
+        submitBtn.onclick = function(e) {
+            // Check if file is selected and is a .py file
+            if (!fileInput.files.length || !fileInput.files[0].name.endsWith('.py')) {
+                fileMissingModal.style.display = 'flex';
+            } else {
+                confirmModal.style.display = 'flex';
+            }
+        };
+
+        backBtn.onclick = function() {
+            fileMissingModal.style.display = 'none';
+        };
+
+        confirmNo.onclick = function() {
+            confirmModal.style.display = 'none';
+        };
+
+        confirmYes.onclick = function() {
+            document.getElementById('submitForm').submit();
+        };
+    };
+</script>
+{% endblock %}

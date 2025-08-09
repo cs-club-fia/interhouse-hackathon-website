@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="glass">
+    <div class="header">Submission Received</div>
+    <div class="status">Your answer for {{ qname|capitalize }} has been submitted successfully.</div>
+    {% if next_question %}
+        <form method="get" action="/question" style="margin: 20px 0;">
+            <input type="hidden" name="qname" value="{{ next_question }}">
+            <button type="submit" style="background:#27ae60;color:#fff;">Continue to {{ next_question|capitalize }}</button>
+        </form>
+    {% else %}
+        <div class="status" style="margin: 20px 0;color:#27ae60;">Congratulations! You've completed all questions!</div>
+    {% endif %}
+    <a href="/dashboard"><button style="background:#3498db;">Back to Dashboard</button></a>
+</div>
+{% endblock %}

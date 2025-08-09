@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="glass">
+    <div class="header">Admin Dashboard</div>
+    
+    {% if success_message %}
+    <div class="status" style="background: #27ae60; color: white; margin: 1rem 0;">
+        {{ success_message }}
+    </div>
+    {% endif %}
+    
+    <div class="status">Active Users: {{ user_count }}</div>
+    <div class="status">Submissions:</div>
+    <table style="width:100%;background:rgba(255,255,255,0.5);border-radius:8px;">
+        <tr><th>User</th>{% for q in questions %}<th>{{ q|capitalize }}</th>{% endfor %}</tr>
+        {% for user, subs in submissions.items() %}
+        <tr>
+            <td>{{ user }}</td>
+            {% for q in questions %}
+            <td>
+                {% if subs[q] %}
+                    <a href="{{ url_for('admin_download', username=user, qname=q) }}" style="color:#27ae60;text-decoration:none;">✔</a>
+                {% else %}
+                    <span style="color:#e74c3c;">✖</span>
+                {% endif %}
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <div class="status">System Status: {{ system_status }}</div>
+    
+    <div class="admin-controls" style="margin-top: 2rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+        <h3>Database Management</h3>
+        <button id="resetBtn" style="background: #c0392b; color: white; margin-top: 1rem;">Reset All Submissions</button>
+    </div>
+
+    <!-- Reset Confirmation Modal -->
+    <div id="resetModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:1000;align-items:center;justify-content:center;">
+        <div style="background:rgba(255,255,255,0.95);border-radius:16px;padding:2rem;box-shadow:0 4px 32px rgba(31,38,135,0.37);max-width:350px;margin:auto;text-align:center;">
+            <h3 style="color:#c0392b;margin-bottom:1rem;">⚠️ Warning: Database Reset</h3>
+            <p>This will delete ALL submissions and reset the database.</p>
+            <p>This action cannot be undone.</p>
+            <div style="margin-top:1.5rem">
+                <form method="post" action="{{ url_for('reset_database') }}">
+                    <button type="submit" style="background:#c0392b;color:white;margin-right:1rem">Yes, Reset Everything</button>
+                </form>
+                <button onclick="document.getElementById('resetModal').style.display='none'" 
+                        style="background:#7f8c8d;color:white">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="status">Errors:</div>
+    <ul id="errorList">
+        {% for err in errors %}
+        <li style="color:#e74c3c;">{{ err }}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="post" action="{{ url_for('admin_logout') }}" style="margin-top: 1rem;">
+        <button type="submit">Logout</button>
+    </form>
+</div>
+
+<script>
+document.getElementById('resetBtn').onclick = function() {
+    document.getElementById('resetModal').style.display = 'flex';
+};
+
+// Auto refresh submissions every 30 seconds
+setInterval(function() {
+    fetch(window.location.href)
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            document.querySelector('table').outerHTML = doc.querySelector('table').outerHTML;
+        });
+}, 30000);
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    var modal = document.getElementById('resetModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+</script>
+{% endblock %}
