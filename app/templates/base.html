@@ -8,6 +8,47 @@
     <script src="{{ url_for('static', filename='timer.js') }}"></script>
 </head>
 <body>
+    <!-- Top-left and top-right logos -->
+    <img src="{{ url_for('img_file', filename='Buildmart.jpeg') }}" alt="Buildmart" class="top-left-logo">
+    <img src="{{ url_for('img_file', filename='FIA.jpeg') }}" alt="FIA" class="top-right-logo">
     {% block content %}{% endblock %}
+    <script>
+    // Student page-leave instrumentation
+    (function(){
+        // Only send leave events for logged-in users on student pages
+        // Throttle sends using sessionStorage lastLeaveSent timestamp
+        function sendLeaveEvent(){
+            try{
+                var last = parseInt(sessionStorage.getItem('lastLeaveSent') || '0', 10);
+                var now = Date.now();
+                if (now - last < 1000) return; // prevent floods (1s)
+                fetch('/student/leave', {
+                    method: 'POST',
+                    credentials: 'same-origin'
+                }).then(function(){
+                    sessionStorage.setItem('lastLeaveSent', String(Date.now()));
+                }).catch(function(e){
+                    // ignore
+                });
+            }catch(e){/*ignore*/}
+        }
+
+        document.addEventListener('visibilitychange', function(){
+            if (document.hidden) sendLeaveEvent();
+        });
+
+        window.addEventListener('blur', function(){
+            sendLeaveEvent();
+        });
+
+        // Also attempt to send on beforeunload (best-effort) using fetch with keepalive
+        window.addEventListener('beforeunload', function(){
+            try{
+                // Use keepalive to allow request to be sent during unload; include credentials
+                fetch('/student/leave', { method: 'POST', keepalive: true, credentials: 'same-origin' });
+            }catch(e){}
+        });
+    })();
+    </script>
 </body>
 </html>

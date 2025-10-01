@@ -16,4 +16,12 @@
         <button type="submit" class="start-button">Start Test</button>
     </form>
 </div>
+<script>
+    document.querySelector('.start-button').addEventListener('click', function(e) {
+        // Normal start flow: no fullscreen behavior
+        e.preventDefault();
+        const form = e.target.closest('form');
+        form.submit();
+    });
+</script>
 {% endblock %}

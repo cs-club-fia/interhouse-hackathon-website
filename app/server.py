@@ -15,9 +15,15 @@ import traceback
 from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.utils import secure_filename
+from werkzeug.exceptions import HTTPException
 import psutil
 from question_manager import QuestionManager
 from flask_socketio import SocketIO, emit
+import logging
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # --- Config ---
 QUESTIONS_DIR = os.path.join(os.path.dirname(__file__), 'questions')
@@ -29,7 +35,7 @@ UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'uploads')
 ALLOWED_EXTENSIONS = {'py'}
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'
+app.secret_key = os.getenv('SECRET_KEY', 'fallbacksecretkey')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -44,6 +50,11 @@ socketio = SocketIO(
 DB_PATH = os.path.join(os.path.dirname(__file__), 'submissions.db')
 qm = QuestionManager(QUESTIONS_DIR, SUBMISSIONS_DIR, LOGINS_PATH, DB_PATH)
 errors = []
+
+# Ensure the logs directory exists
+os.makedirs(os.path.join(os.path.dirname(__file__), 'logs'), exist_ok=True)
+# Initialize logging
+logging.basicConfig(filename='app/logs/errors.log', level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # --- User Model ---
 class User(UserMixin):
@@ -70,6 +81,7 @@ def log_error(msg):
     if len(errors) > 10:
         errors.pop(0)
     socketio.emit('error_update', {'errors': errors}, namespace='/admin')
+    logging.error(msg)
 
 # --- Routes ---
 @app.route('/', methods=['GET', 'POST'])
@@ -105,9 +117,29 @@ def dashboard():
         return render_template('start_test.html', username=current_user.id)
     
     questions = list(qm.timers.keys())
+
+    # Build a submitted map so the template can check per-question submission status
+    submitted = {}
+    current_question = None
+    for q in questions:
+        # First try the QuestionManager API
+        try:
+            submitted[q] = bool(qm.has_submitted(current_user.id, q))
+        except Exception:
+            # Fallback: check for file on disk
+            submitted[q] = os.path.exists(os.path.join(SUBMISSIONS_DIR, current_user.id, f"{q}.py"))
+
+    # Determine the current active/available question: the first question not submitted
+    for q in questions:
+        if not submitted.get(q):
+            current_question = q
+            break
+
     return render_template('dashboard.html', 
                          username=current_user.id, 
-                         questions=questions)
+                         questions=questions,
+                         submitted=submitted,
+                         current_question=current_question)
 
 # Add route for start test
 @app.route('/start_test', methods=['GET'])
@@ -158,6 +190,35 @@ def question():
         return redirect(url_for('dashboard'))
     
     if request.method == 'POST':
+        # Support auto-submit when timer expires (client may post auto_submit=1)
+        if request.form.get('auto_submit') == '1':
+            try:
+                # If there is no uploaded file, create an empty .py file for this user/question
+                user_dir = os.path.join(SUBMISSIONS_DIR, current_user.id)
+                os.makedirs(user_dir, exist_ok=True)
+                dest = os.path.join(user_dir, f"{qname}.py")
+                # Create an empty file only if it doesn't already exist
+                if not os.path.exists(dest):
+                    with open(dest, 'w', encoding='utf-8') as f:
+                        f.write('# auto-submitted empty file\n')
+                # Mark submission in DB (use qm.submit_answer by creating a temporary path)
+                # Create a small temp file path to pass into qm.submit_answer
+                temp_path = dest
+                qm.submit_answer(current_user.id, qname, temp_path)
+
+                # Redirect to next question or review
+                questions = list(qm.timers.keys())
+                current_idx = questions.index(qname)
+                next_question = questions[current_idx + 1] if current_idx < len(questions) - 1 else None
+                if next_question:
+                    return redirect(url_for('question', qname=next_question))
+                else:
+                    return redirect(url_for('review'))
+            except Exception as e:
+                log_error(traceback.format_exc())
+                return ("", 500)
+
+        # Normal uploaded-file handling
         if 'answer' not in request.files:
             return render_template('question.html', qname=qname, 
                                 error='No file uploaded', 
@@ -212,6 +273,29 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
+
+# Serve favicon to avoid 500 errors when browser requests /favicon.ico
+@app.route('/favicon.ico')
+def favicon():
+    try:
+        # Prefer a real file in static/ if present
+        static_favicon = os.path.join(os.path.dirname(__file__), 'static', 'favicon.ico')
+        if os.path.exists(static_favicon):
+            return send_from_directory(os.path.join(os.path.dirname(__file__), 'static'), 'favicon.ico')
+        # If no favicon provided, return 204 No Content so browsers stop requesting
+        return ('', 204)
+    except Exception:
+        # Log and return a small 204 instead of causing a 500
+        log_error('Failed to serve favicon.ico')
+        return ('', 204)
+
+
+# Serve images from app/img directory (for logos placed outside static/)
+@app.route('/img/<path:filename>')
+def img_file(filename):
+    img_dir = os.path.join(os.path.dirname(__file__), 'img')
+    return send_from_directory(img_dir, filename)
+
 @app.route('/admin')
 @login_required
 def admin_dashboard():
@@ -219,6 +303,7 @@ def admin_dashboard():
         return redirect(url_for('dashboard'))
     
     submissions = qm.get_all_submissions()
+    leave_counts = qm.get_leave_counts()
     # Count users with any timer started
     import sqlite3
     with sqlite3.connect(DB_PATH) as conn:
@@ -233,7 +318,38 @@ def admin_dashboard():
                          questions=list(qm.timers.keys()), 
                          system_status=system_status, 
                          errors=errors,
-                         success_message=success_message)
+                         success_message=success_message,
+                         leave_counts=leave_counts)
+
+
+@app.route('/admin/stats')
+@login_required
+def admin_stats():
+    if not current_user.is_admin:
+        return ("", 403)
+    try:
+        return {
+            'cpu': psutil.cpu_percent(),
+            'ram': psutil.virtual_memory().percent
+        }
+    except Exception as e:
+        log_error(f"admin_stats error: {e}")
+        return ({}, 500)
+
+
+# Endpoint for students to report they left/blurred the page
+@app.route('/student/leave', methods=['POST'])
+@login_required
+def student_leave():
+    # Only allow students (not admins) to report
+    if current_user.is_admin:
+        return ("", 403)
+    try:
+        qm.increment_leave_count(current_user.id)
+        return ('', 204)
+    except Exception as e:
+        log_error(f"student_leave error: {e}")
+        return ('', 500)
 
 @app.route('/admin/logout', methods=['POST'])
 @login_required
@@ -283,9 +399,28 @@ def reset_database():
         log_error(f"Database reset failed: {str(e)}\n{traceback.format_exc()}")
         return redirect(url_for('admin_dashboard'))
 
+@app.route('/admin/logs', methods=['GET'])
+@login_required
+def view_logs():
+    if not current_user.is_admin:
+        return redirect(url_for('dashboard'))
+
+    log_file_path = os.path.join(os.path.dirname(__file__), 'logs', 'errors.log')
+    if os.path.exists(log_file_path):
+        with open(log_file_path, 'r') as log_file:
+            logs = log_file.readlines()
+        return render_template('admin_logs.html', logs=logs)
+    else:
+        return render_template('admin_logs.html', logs=None)
+
 # --- Error Handling ---
 @app.errorhandler(Exception)
 def handle_exception(e):
+    # If it's an HTTPException (like 401, 403, 404), let Flask handle it normally
+    if isinstance(e, HTTPException):
+        # Return the original HTTP exception
+        return e
+    # Otherwise log full traceback and return generic 500
     log_error(traceback.format_exc())
     return "An error occurred. Please contact admin.", 500
 
@@ -333,6 +468,17 @@ def get_ssl_context():
 @socketio.on('connect', namespace='/admin')
 def admin_connect():
     emit('error_update', {'errors': errors})
+    emit('stats_update', {
+        'cpu': psutil.cpu_percent(),
+        'ram': psutil.virtual_memory().percent
+    })
+
+@socketio.on('request_stats', namespace='/admin')
+def send_stats():
+    emit('stats_update', {
+        'cpu': psutil.cpu_percent(),
+        'ram': psutil.virtual_memory().percent
+    })
 
 # --- Run Server ---
 def run_server():
@@ -356,3 +502,18 @@ def run_server():
 if __name__ == '__main__':
     run_server()
 
+# Add indexes to the database
+def _init_db(self):
+    import sqlite3
+    with sqlite3.connect(self.db_path) as conn:
+        c = conn.cursor()
+        c.execute('''CREATE TABLE IF NOT EXISTS submissions (
+            username TEXT,
+            question TEXT,
+            submitted INTEGER,
+            start_time REAL,
+            PRIMARY KEY (username, question)
+        )''')
+        c.execute('CREATE INDEX IF NOT EXISTS idx_username ON submissions (username)')
+        c.execute('CREATE INDEX IF NOT EXISTS idx_question ON submissions (question)')
+        conn.commit()

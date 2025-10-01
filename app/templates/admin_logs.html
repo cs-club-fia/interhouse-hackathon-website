@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="glass">
+    <div class="header">Error Logs</div>
+    {% if logs %}
+        <pre style="background: #1e1e1e; color: #27c9d7; padding: 1rem; border-radius: 8px; overflow: auto; max-height: 400px;">{{ logs|join('') }}</pre>
+    {% else %}
+        <div class="status">No logs available.</div>
+    {% endif %}
+    <a href="/admin"><button style="background:#3498db;">Back to Dashboard</button></a>
+</div>
+{% endblock %}

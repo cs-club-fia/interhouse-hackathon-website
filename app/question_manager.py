@@ -7,6 +7,10 @@ import os
 import json
 import time
 from threading import Lock
+import logging
+
+# Initialize logging
+logging.basicConfig(filename='app/logs/errors.log', level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class QuestionManager:
     def __init__(self, questions_dir, submissions_dir, logins_path, db_path):
@@ -16,7 +20,7 @@ class QuestionManager:
         self.db_path = db_path
         self.lock = Lock()
         self.timers = {
-            "question1": 600,  # 10 min
+            "question1": 20,   # 20 seconds (changed for testing)
             "question2": 900,  # 15 min
             "question3": 1200, # 20 min
             "question4": 900,  # 15 min
@@ -40,6 +44,17 @@ class QuestionManager:
                 start_time REAL,
                 PRIMARY KEY (username, question)
             )''')
+            # Table for student metrics such as leave counts
+            c.execute('''CREATE TABLE IF NOT EXISTS student_metrics (
+                username TEXT PRIMARY KEY,
+                leave_count INTEGER DEFAULT 0
+            )''')
+            # Add a column to store the last leave timestamp (to debounce rapid events)
+            try:
+                c.execute("ALTER TABLE student_metrics ADD COLUMN last_leave_ts REAL DEFAULT 0")
+            except Exception:
+                # SQLite will raise if the column already exists; ignore
+                pass
             conn.commit()
 
     def get_question_text(self, qname):
@@ -84,25 +99,29 @@ class QuestionManager:
     def submit_answer(self, username, qname, file_path):
         import sqlite3
         with self.lock:
-            # Save submission file
-            user_dir = os.path.join(self.submissions_dir, username)
-            os.makedirs(user_dir, exist_ok=True)
-            dest = os.path.join(user_dir, f"{qname}.py")
-            os.replace(file_path, dest)
-            
-            # Update database
-            with sqlite3.connect(self.db_path) as conn:
-                c = conn.cursor()
-                # Insert or update submission status
-                c.execute("""
-                    INSERT OR REPLACE INTO submissions 
-                    (username, question, submitted, start_time)
-                    VALUES (?, ?, 1, COALESCE(
-                        (SELECT start_time FROM submissions WHERE username=? AND question=?),
-                        ?
-                    ))
-                """, (username, qname, username, qname, time.time()))
-                conn.commit()
+            try:
+                # Save submission file
+                user_dir = os.path.join(self.submissions_dir, username)
+                os.makedirs(user_dir, exist_ok=True)
+                dest = os.path.join(user_dir, f"{qname}.py")
+                os.replace(file_path, dest)
+                
+                # Update database
+                with sqlite3.connect(self.db_path) as conn:
+                    c = conn.cursor()
+                    # Insert or update submission status
+                    c.execute("""
+                        INSERT OR REPLACE INTO submissions 
+                        (username, question, submitted, start_time)
+                        VALUES (?, ?, 1, COALESCE(
+                            (SELECT start_time FROM submissions WHERE username=? AND question=?),
+                            ?
+                        ))
+                    """, (username, qname, username, qname, time.time()))
+                    conn.commit()
+            except Exception as e:
+                logging.error(f"Error in submit_answer: {str(e)}")
+                raise
 
     def has_submitted(self, username, qname):
         import sqlite3
@@ -121,7 +140,15 @@ class QuestionManager:
             c.execute("SELECT username, question, submitted FROM submissions")
             rows = c.fetchall()
             
-            # Initialize result with all users who have any submission
+            # Initialize result with all students from logins (so admins see every student)
+            try:
+                students = [s['username'] for s in self.logins.get('students', [])]
+            except Exception:
+                students = []
+            for username in students:
+                result[username] = {q: False for q in self.timers.keys()}
+
+            # Also include any users recorded in the submissions DB that might not be in logins
             for username, _, _ in rows:
                 if username not in result:
                     result[username] = {q: False for q in self.timers.keys()}
@@ -146,6 +173,48 @@ class QuestionManager:
             c = conn.cursor()
             c.execute("DELETE FROM submissions")
             conn.commit()
+
+    # --- Leave count metrics ---
+    def increment_leave_count(self, username):
+        import sqlite3
+        import time
+        with self.lock, sqlite3.connect(self.db_path) as conn:
+            c = conn.cursor()
+            # Ensure a row exists
+            c.execute("INSERT OR IGNORE INTO student_metrics (username, leave_count, last_leave_ts) VALUES (?, 0, 0)", (username,))
+            # Read last leave timestamp
+            c.execute("SELECT last_leave_ts FROM student_metrics WHERE username = ?", (username,))
+            row = c.fetchone()
+            last_ts = float(row[0]) if row and row[0] is not None else 0.0
+            now = time.time()
+            # Debounce rapid events: only count if at least 3 seconds since last recorded leave
+            if now - last_ts >= 3.0:
+                c.execute("UPDATE student_metrics SET leave_count = leave_count + 1, last_leave_ts = ? WHERE username = ?", (now, username))
+                conn.commit()
+            else:
+                # Update last_leave_ts to the latest time to avoid repeated near-simultaneous events
+                c.execute("UPDATE student_metrics SET last_leave_ts = ? WHERE username = ?", (now, username))
+                conn.commit()
+
+    def get_leave_counts(self):
+        import sqlite3
+        result = {}
+        with sqlite3.connect(self.db_path) as conn:
+            c = conn.cursor()
+            c.execute("SELECT username, leave_count FROM student_metrics")
+            rows = c.fetchall()
+            for username, leave_count in rows:
+                result[username] = leave_count
+
+        # Ensure all students are present with at least 0
+        try:
+            students = [s['username'] for s in self.logins.get('students', [])]
+        except Exception:
+            students = []
+        for s in students:
+            result.setdefault(s, 0)
+
+        return result
 
 # Usage example:
 # qm = QuestionManager('app/questions', 'app/submissions', 'app/logins.json')

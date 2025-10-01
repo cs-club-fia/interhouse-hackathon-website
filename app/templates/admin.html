@@ -11,11 +11,22 @@
     
     <div class="status">Active Users: {{ user_count }}</div>
     <div class="status">Submissions:</div>
-    <table style="width:100%;background:rgba(255,255,255,0.5);border-radius:8px;">
-        <tr><th>User</th>{% for q in questions %}<th>{{ q|capitalize }}</th>{% endfor %}</tr>
+    <div style="margin: 0.5rem 0;">
+        <input type="text" id="tableSearch" placeholder="Search users..." style="padding:6px;width:240px;">
+    </div>
+    <table id="subTable" style="width:100%;background:rgba(255,255,255,0.5);border-radius:8px;">
+        <thead>
+        <tr>
+            <th data-sort="string">User</th>
+            <th data-sort="int">Leaves</th>
+            {% for q in questions %}<th data-sort="string">{{ q|capitalize }}</th>{% endfor %}
+        </tr>
+        </thead>
+        <tbody>
         {% for user, subs in submissions.items() %}
         <tr>
             <td>{{ user }}</td>
+            <td>{{ leave_counts.get(user, 0) }}</td>
             {% for q in questions %}
             <td>
                 {% if subs[q] %}
@@ -27,9 +38,10 @@
             {% endfor %}
         </tr>
         {% endfor %}
+        </tbody>
     </table>
     
-    <div class="status">System Status: {{ system_status }}</div>
+    <div class="status">System Status: <span id="systemStatus">{{ system_status }}</span></div>
     
     <div class="admin-controls" style="margin-top: 2rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
         <h3>Database Management</h3>
@@ -71,14 +83,35 @@ document.getElementById('resetBtn').onclick = function() {
 
 // Auto refresh submissions every 30 seconds
 setInterval(function() {
-    fetch(window.location.href)
+    // include credentials so the session cookie is sent with the request
+    fetch(window.location.href, { credentials: 'same-origin' })
         .then(response => response.text())
         .then(html => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
             document.querySelector('table').outerHTML = doc.querySelector('table').outerHTML;
-        });
+        }).catch(function(err){ console.error('Failed to refresh submissions:', err); });
 }, 30000);
+
+// Poll server stats every 5 seconds and update the System Status field
+function updateStats() {
+    // send credentials so admin session cookie is included
+    fetch('/admin/stats', { credentials: 'same-origin' })
+        .then(r => {
+            if (!r.ok) throw new Error('Failed to fetch stats');
+            return r.json();
+        })
+        .then(data => {
+            var el = document.getElementById('systemStatus');
+            if (el && data && typeof data.cpu !== 'undefined') {
+                el.textContent = `CPU: ${data.cpu}% | RAM: ${data.ram}%`;
+            }
+        }).catch(err => {
+            console.error('Could not update stats:', err);
+        });
+}
+updateStats();
+setInterval(updateStats, 5000);
 
 // Close modal when clicking outside
 window.onclick = function(event) {
@@ -87,5 +120,43 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 }
+
+// --- Search and simple sortable table ---
+document.getElementById('tableSearch').addEventListener('input', function(e){
+    var q = e.target.value.toLowerCase();
+    var rows = document.querySelectorAll('#subTable tbody tr');
+    rows.forEach(function(r){
+        var text = r.textContent.toLowerCase();
+        r.style.display = text.indexOf(q) === -1 ? 'none' : '';
+    });
+});
+
+// Simple column sort on header click
+document.querySelectorAll('#subTable thead th').forEach(function(th, idx){
+    th.style.cursor = 'pointer';
+    th.addEventListener('click', function(){
+        var table = document.getElementById('subTable');
+        var tbody = table.tBodies[0];
+        var rows = Array.from(tbody.querySelectorAll('tr'));
+        var type = th.getAttribute('data-sort') || 'string';
+        var asc = !th.classList.contains('asc');
+        // clear classes
+        table.querySelectorAll('th').forEach(function(h){ h.classList.remove('asc','desc'); });
+        th.classList.add(asc ? 'asc' : 'desc');
+        rows.sort(function(a,b){
+            var A = a.children[idx].textContent.trim();
+            var B = b.children[idx].textContent.trim();
+            if (type === 'int') {
+                return asc ? (parseInt(A||0)-parseInt(B||0)) : (parseInt(B||0)-parseInt(A||0));
+            }
+            A = A.toLowerCase(); B = B.toLowerCase();
+            if (A < B) return asc ? -1 : 1;
+            if (A > B) return asc ? 1 : -1;
+            return 0;
+        });
+        // re-append rows
+        rows.forEach(function(r){ tbody.appendChild(r); });
+    });
+});
 </script>
 {% endblock %}
