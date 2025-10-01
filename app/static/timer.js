@@ -1,5 +1,6 @@
 // Real-time countdown timer for questions
-function startTimer(duration, display, warningCallback) {
+// signature: startTimer(durationSeconds, displayEl, warningCallback, timeoutCallback)
+function startTimer(duration, display, warningCallback, timeoutCallback) {
     let timer = duration, minutes, seconds;
     let interval = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
@@ -12,6 +13,13 @@ function startTimer(duration, display, warningCallback) {
         if (--timer < 0) {
             clearInterval(interval);
             display.textContent = "Time's up!";
+            try {
+                if (timeoutCallback) timeoutCallback();
+            } catch (e) {
+                console.error('timeoutCallback error', e);
+            }
         }
     }, 1000);
 }
+
+// No fullscreen functionality: removed per request

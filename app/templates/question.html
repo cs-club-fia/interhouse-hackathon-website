@@ -33,6 +33,33 @@
         var display = document.getElementById('timer');
         startTimer(duration, display, function(){
             display.style.background = '#fffbe6';
+        }, function(){
+            // timeout callback: auto-submit
+            // If a file is selected, submit the form normally
+            if (fileInput.files.length && fileInput.files[0].name.endsWith('.py')) {
+                document.getElementById('submitForm').submit();
+                return;
+            }
+            // No file selected: send a POST to server to create a blank .py and mark submission.
+            // Use fetch and then navigate to the next question or review based on response.
+            fetch(window.location.href, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ 'auto_submit': '1' }),
+                credentials: 'same-origin'
+            }).then(function(resp){
+                // If server redirects, follow; otherwise, try to parse JSON or just reload
+                if (resp.redirected) {
+                    window.location.href = resp.url;
+                } else {
+                    // Reload to pick up server-side redirect/changes
+                    window.location.reload();
+                }
+            }).catch(function(err){
+                console.error('Auto-submit failed', err);
+                // Fallback: just reload the page
+                window.location.reload();
+            });
         });
 
         // File validation and modal logic
@@ -65,5 +92,7 @@
             document.getElementById('submitForm').submit();
         };
     };
+
+    // No fullscreen functionality: removed per request.
 </script>
 {% endblock %}
