@@ -5,3 +5,20 @@
 2025-09-25 23:19:00,265 - INFO - Server initialized for eventlet.
 2025-09-25 23:20:23,107 - INFO - Server initialized for eventlet.
 2025-09-25 23:21:40,520 - INFO - Server initialized for eventlet.
+2025-10-03 21:39:41,105 - INFO - Server initialized for eventlet.
+2025-10-03 21:47:18,367 - INFO - Server initialized for eventlet.
+2025-10-03 22:00:47,967 - INFO - Server initialized for eventlet.
+2025-10-03 22:10:11,381 - INFO - Server initialized for eventlet.
+2025-10-03 22:11:52,883 - INFO - emitting event "error_update" to all [/admin]
+2025-10-03 22:11:52,884 - ERROR - Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\Competitions\website\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+  File "C:\Users\admin\Desktop\Competitions\website\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+  File "C:\Users\admin\Desktop\Competitions\website\app\server.py", line 90, in login
+    username = request.form['username']
+               ^^^^^^^^^^^^
+  File "C:\Users\admin\Desktop\Competitions\website\.venv\Lib\site-packages\werkzeug\utils.py", line 106, in __get__
+  File "C:\Users\admin\Desktop\Competitions\website\.venv\Lib\site-packages\werkzeug\wrappers\request.py", line 443, in form
+  File "C:\Users\admin\Desktop\Competitions\website\.venv\Lib\site-packages\flask\wrappers.py", line 124, in _load_form_data
+ModuleNotFoundError: No module named 'flask.debughelpers'
+
+2025-10-03 22:20:57,158 - INFO - Server initialized for eventlet.
