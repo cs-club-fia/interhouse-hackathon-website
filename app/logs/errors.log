@@ -22,3 +22,247 @@
 ModuleNotFoundError: No module named 'flask.debughelpers'
 
 2025-10-03 22:20:57,158 - INFO - Server initialized for eventlet.
+2025-10-04 10:32:16,487 - INFO - Server initialized for eventlet.
+2025-10-04 10:33:50,185 - INFO - Server initialized for threading.
+2025-10-04 10:33:50,268 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-04 10:33:50,268 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 10:34:29,116 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:29] "GET / HTTP/1.1" 200 -
+2025-10-04 10:34:30,272 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:30] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:34:30,285 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:30] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:34:30,312 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:30] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-04 10:34:30,386 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:30] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-04 10:34:30,455 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-04 10:34:30,573 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:30] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:34:39,058 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[31m[1mPOST /student/leave HTTP/1.1[0m" 401 -
+2025-10-04 10:34:39,079 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-10-04 10:34:39,096 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "GET /dashboard HTTP/1.1" 200 -
+2025-10-04 10:34:39,123 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:34:39,137 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:34:39,163 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-04 10:34:39,164 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:34:39,164 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-04 10:34:39,165 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:34:39,176 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-04 10:34:39,290 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:39] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:34:40,695 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:40] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:34:42,733 - INFO - 192.168.0.125 - - [04/Oct/2025 10:34:42] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:37:49,409 - INFO - Server initialized for threading.
+2025-10-04 10:37:49,460 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-04 10:37:49,461 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 10:38:18,567 - INFO - 192.168.0.125 - - [04/Oct/2025 10:38:18] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-10-04 10:38:18,662 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:18] "GET / HTTP/1.1" 200 -
+2025-10-04 10:38:19,358 - INFO - 192.168.0.125 - - [04/Oct/2025 10:38:19] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:38:19,489 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:19] "GET /static/style.css HTTP/1.1" 200 -
+2025-10-04 10:38:19,503 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:19] "GET /img/Buildmart.jpeg HTTP/1.1" 200 -
+2025-10-04 10:38:19,503 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:19] "GET /static/timer.js HTTP/1.1" 200 -
+2025-10-04 10:38:19,503 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:19] "GET /img/FIA.jpeg HTTP/1.1" 200 -
+2025-10-04 10:38:19,831 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:19] "GET /img/club_logo.png HTTP/1.1" 200 -
+2025-10-04 10:38:20,094 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:20] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:38:24,870 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:24] "[31m[1mPOST /student/leave HTTP/1.1[0m" 401 -
+2025-10-04 10:38:24,872 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:24] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-10-04 10:38:25,126 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:25] "GET /dashboard HTTP/1.1" 200 -
+2025-10-04 10:38:25,192 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:25] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:38:25,468 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-04 10:38:25,484 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:25] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:38:25,493 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:25] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:38:25,493 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:25] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-04 10:38:25,493 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:25] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:38:25,813 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:25] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-04 10:38:26,056 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:26] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:38:27,460 - INFO - 127.0.0.1 - - [04/Oct/2025 10:38:27] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:39:55,975 - INFO - Server initialized for threading.
+2025-10-04 10:39:56,020 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-04 10:39:56,020 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 10:40:29,394 - INFO - Server initialized for threading.
+2025-10-04 10:40:29,427 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-04 10:40:29,427 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 10:41:01,081 - INFO - Server initialized for threading.
+2025-10-04 10:41:01,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-04 10:41:01,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-04 10:41:01,138 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 10:41:01,138 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 10:41:38,499 - INFO - Server initialized for threading.
+2025-10-04 10:41:38,549 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-04 10:41:38,549 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-04 10:41:38,550 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 10:41:38,550 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 10:42:15,627 - INFO - HTTP REQUEST: GET / from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:15,627 - INFO - HTTP REQUEST: GET / from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:15,660 - INFO - HTTP RESPONSE: GET / -> 200 OK to 127.0.0.1
+2025-10-04 10:42:15,660 - INFO - HTTP RESPONSE: GET / -> 200 OK to 127.0.0.1
+2025-10-04 10:42:15,660 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:15] "GET / HTTP/1.1" 200 -
+2025-10-04 10:42:15,660 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:15] "GET / HTTP/1.1" 200 -
+2025-10-04 10:42:15,700 - INFO - HTTP REQUEST: GET /dashboard from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:15,700 - INFO - HTTP REQUEST: GET /dashboard from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:15,729 - INFO - HTTP RESPONSE: GET /dashboard -> 401 UNAUTHORIZED to 192.168.0.125
+2025-10-04 10:42:15,729 - INFO - HTTP RESPONSE: GET /dashboard -> 401 UNAUTHORIZED to 192.168.0.125
+2025-10-04 10:42:15,731 - INFO - 192.168.0.125 - - [04/Oct/2025 10:42:15] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-10-04 10:42:15,731 - INFO - 192.168.0.125 - - [04/Oct/2025 10:42:15] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-10-04 10:42:15,899 - INFO - HTTP REQUEST: GET /dashboard from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:15,899 - INFO - HTTP REQUEST: GET /dashboard from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:15,899 - INFO - HTTP RESPONSE: GET /dashboard -> 401 UNAUTHORIZED to 127.0.0.1
+2025-10-04 10:42:15,899 - INFO - HTTP RESPONSE: GET /dashboard -> 401 UNAUTHORIZED to 127.0.0.1
+2025-10-04 10:42:15,901 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:15] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-10-04 10:42:15,901 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:15] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-10-04 10:42:16,343 - INFO - HTTP REQUEST: GET /static/style.css from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,343 - INFO - HTTP REQUEST: GET /static/style.css from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,345 - INFO - HTTP REQUEST: GET /static/timer.js from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,345 - INFO - HTTP REQUEST: GET /static/timer.js from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,347 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,347 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,349 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,349 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,535 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,535 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,535 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-04 10:42:16,535 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-04 10:42:16,536 - INFO - 192.168.0.125 - - [04/Oct/2025 10:42:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:42:16,536 - INFO - 192.168.0.125 - - [04/Oct/2025 10:42:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:42:16,714 - INFO - HTTP RESPONSE: GET /static/timer.js -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,714 - INFO - HTTP RESPONSE: GET /static/timer.js -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,716 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /static/timer.js HTTP/1.1" 200 -
+2025-10-04 10:42:16,716 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /static/timer.js HTTP/1.1" 200 -
+2025-10-04 10:42:16,731 - INFO - HTTP RESPONSE: GET /static/style.css -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,731 - INFO - HTTP RESPONSE: GET /static/style.css -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,732 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /static/style.css HTTP/1.1" 200 -
+2025-10-04 10:42:16,732 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /static/style.css HTTP/1.1" 200 -
+2025-10-04 10:42:16,743 - INFO - HTTP REQUEST: GET /img/club_logo.png from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,743 - INFO - HTTP REQUEST: GET /img/club_logo.png from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,744 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,744 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,745 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /img/club_logo.png HTTP/1.1" 200 -
+2025-10-04 10:42:16,745 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /img/club_logo.png HTTP/1.1" 200 -
+2025-10-04 10:42:16,814 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,814 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,814 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /img/Buildmart.jpeg HTTP/1.1" 200 -
+2025-10-04 10:42:16,814 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /img/Buildmart.jpeg HTTP/1.1" 200 -
+2025-10-04 10:42:16,847 - INFO - HTTP REQUEST: GET /favicon.ico from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,847 - INFO - HTTP REQUEST: GET /favicon.ico from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,847 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:16,847 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:16,849 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:42:16,849 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:42:16,852 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,852 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 200 OK to 127.0.0.1
+2025-10-04 10:42:16,853 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /img/FIA.jpeg HTTP/1.1" 200 -
+2025-10-04 10:42:16,853 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /img/FIA.jpeg HTTP/1.1" 200 -
+2025-10-04 10:42:16,877 - INFO - HTTP REQUEST: GET /favicon.ico from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,877 - INFO - HTTP REQUEST: GET /favicon.ico from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:16,882 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:16,882 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:16,882 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:42:16,882 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:42:23,350 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:23,350 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:23,350 - INFO - HTTP RESPONSE: POST /student/leave -> 401 UNAUTHORIZED to 127.0.0.1
+2025-10-04 10:42:23,350 - INFO - HTTP RESPONSE: POST /student/leave -> 401 UNAUTHORIZED to 127.0.0.1
+2025-10-04 10:42:23,350 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:23] "[31m[1mPOST /student/leave HTTP/1.1[0m" 401 -
+2025-10-04 10:42:23,350 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:23] "[31m[1mPOST /student/leave HTTP/1.1[0m" 401 -
+2025-10-04 10:42:34,133 - INFO - HTTP REQUEST: POST / from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,133 - INFO - HTTP REQUEST: POST / from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,133 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,133 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,133 - INFO - HTTP RESPONSE: POST /student/leave -> 401 UNAUTHORIZED to 127.0.0.1
+2025-10-04 10:42:34,133 - INFO - HTTP RESPONSE: POST /student/leave -> 401 UNAUTHORIZED to 127.0.0.1
+2025-10-04 10:42:34,133 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[31m[1mPOST /student/leave HTTP/1.1[0m" 401 -
+2025-10-04 10:42:34,133 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[31m[1mPOST /student/leave HTTP/1.1[0m" 401 -
+2025-10-04 10:42:34,133 - INFO - HTTP RESPONSE: POST / -> 302 FOUND to 127.0.0.1
+2025-10-04 10:42:34,133 - INFO - HTTP RESPONSE: POST / -> 302 FOUND to 127.0.0.1
+2025-10-04 10:42:34,143 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-10-04 10:42:34,143 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-10-04 10:42:34,144 - INFO - HTTP REQUEST: GET /dashboard from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,144 - INFO - HTTP REQUEST: GET /dashboard from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,153 - INFO - HTTP RESPONSE: GET /dashboard -> 200 OK to 127.0.0.1
+2025-10-04 10:42:34,153 - INFO - HTTP RESPONSE: GET /dashboard -> 200 OK to 127.0.0.1
+2025-10-04 10:42:34,155 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "GET /dashboard HTTP/1.1" 200 -
+2025-10-04 10:42:34,155 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "GET /dashboard HTTP/1.1" 200 -
+2025-10-04 10:42:34,189 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,189 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,197 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:34,197 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:34,197 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:42:34,197 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:42:34,206 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,206 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,213 - INFO - HTTP REQUEST: GET /static/timer.js from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,213 - INFO - HTTP REQUEST: GET /static/timer.js from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,214 - INFO - HTTP REQUEST: GET /static/style.css from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,214 - INFO - HTTP REQUEST: GET /static/style.css from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,215 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,215 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,216 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,216 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,217 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,218 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,218 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,219 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,219 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,219 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,219 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,219 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,219 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,220 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,217 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,220 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,222 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:34,222 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:34,223 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:42:34,231 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,231 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,223 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:42:34,231 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,231 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,234 - INFO - HTTP REQUEST: GET /img/club_logo.png from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,234 - INFO - HTTP REQUEST: GET /img/club_logo.png from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,238 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,238 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-04 10:42:34,239 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,239 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-04 10:42:34,319 - INFO - HTTP REQUEST: GET /favicon.ico from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,319 - INFO - HTTP REQUEST: GET /favicon.ico from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:34,319 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:34,319 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:34,320 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:42:34,320 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:34] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-04 10:42:35,433 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:35,433 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:35,442 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:35,442 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:35,442 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:35] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:42:35,442 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:35] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:42:37,082 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:37,082 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:37,087 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:37,087 - INFO - HTTP REQUEST: POST /student/leave from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-04 10:42:37,095 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:37,095 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:37,095 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:37] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:42:37,095 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:37] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:42:37,104 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:37,104 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
+2025-10-04 10:42:37,108 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:37] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-04 10:42:37,108 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:37] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -

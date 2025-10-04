@@ -3,9 +3,11 @@ Main Flask Server for School Hackathon
 HTTPS, login, question/timer logic, submissions, admin dashboard
 Compatible with Python 3.10+
 """
-# Monkey patch first, before any other imports
-import eventlet
-eventlet.monkey_patch()
+# Do not use eventlet monkey-patching here. Eventlet can be incompatible with
+# some Python versions (notably 3.13+) and causes import-time crashes. We force
+# the safe 'threading' async mode for Flask-SocketIO so the server starts
+# reliably in development environments.
+USE_EVENTLET = False
 
 import os
 import ssl
@@ -39,13 +41,56 @@ app.secret_key = os.getenv('SECRET_KEY', 'fallbacksecretkey')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 login_manager = LoginManager()
 login_manager.init_app(app)
+async_mode = 'threading'
 socketio = SocketIO(
     app,
-    async_mode='eventlet',
+    async_mode=async_mode,
     logger=True,
     engineio_logger=True,
     cors_allowed_origins='*'
 )
+# Configure logging so that Flask/Werkzeug request logs go to stdout
+import logging, sys
+root_logger = logging.getLogger()
+if not root_logger.handlers:
+    h = logging.StreamHandler(sys.stdout)
+    h.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+    root_logger.addHandler(h)
+root_logger.setLevel(logging.INFO)
+
+# Ensure the Werkzeug logger (HTTP request logging) also writes to stdout
+werk_logger = logging.getLogger('werkzeug')
+if not any(isinstance(h, logging.StreamHandler) for h in werk_logger.handlers):
+    werk_logger.addHandler(logging.StreamHandler(sys.stdout))
+werk_logger.setLevel(logging.INFO)
+# Attach same handlers to werkzeug and app logger to ensure consistent output
+for h in root_logger.handlers:
+    if h not in werk_logger.handlers:
+        werk_logger.addHandler(h)
+app.logger.handlers = root_logger.handlers
+app.logger.setLevel(logging.INFO)
+
+# --- Request logging (ensure every HTTP request/response is recorded) ---
+from flask import has_request_context
+
+
+@app.before_request
+def log_request_info():
+    try:
+        addr = request.remote_addr or 'unknown'
+        app.logger.info(f"HTTP REQUEST: {request.method} {request.path} from {addr} UA={request.headers.get('User-Agent')}")
+    except Exception:
+        app.logger.exception('Failed to log request info')
+
+
+@app.after_request
+def log_response_info(response):
+    try:
+        addr = request.remote_addr or 'unknown'
+        app.logger.info(f"HTTP RESPONSE: {request.method} {request.path} -> {response.status} to {addr}")
+    except Exception:
+        app.logger.exception('Failed to log response info')
+    return response
 
 DB_PATH = os.path.join(os.path.dirname(__file__), 'submissions.db')
 qm = QuestionManager(QUESTIONS_DIR, SUBMISSIONS_DIR, LOGINS_PATH, DB_PATH)
@@ -491,6 +536,23 @@ def run_server():
         print(f"{rule.endpoint}: {rule.methods} {rule.rule}")
     
     with app.app_context():
+        # If running in production (or if USE_WAITRESS=1), use Waitress WSGI server
+        # to avoid the development server warning and provide a production-ready
+        # WSGI server on Windows. Note: Waitress does not support WebSocket
+        # transports — Socket.IO will fall back to polling unless eventlet/gevent
+        # is used.
+        use_waitress = os.getenv('USE_WAITRESS') == '1' or os.getenv('PRODUCTION') == '1'
+        if use_waitress:
+            try:
+                from waitress import serve
+                print('Starting server under Waitress WSGI server (production mode)')
+                # Wrap the Socket.IO app as a WSGI application
+                wsgi_app = socketio.WSGIApp(app)
+                serve(wsgi_app, host='0.0.0.0', port=5000)
+                return
+            except Exception as e:
+                print(f'Waitress not available or failed to start: {e}. Falling back to socketio.run()')
+
         socketio.run(
             app,
             host='0.0.0.0',

@@ -27,21 +27,27 @@ def make_venv():
         print("Virtual environment already exists.")
 def check_dependencies():
     print("Checking dependencies...")
+    # Prefer to check imports inside the virtualenv (if present); otherwise check current interpreter
+    python_exec = get_venv_python() if os.path.exists('.venv') else sys.executable
+    check_cmd = [python_exec, '-c', 'import flask, flask_login, werkzeug, cryptography, psutil']
     try:
-        import flask, flask_login, werkzeug, cryptography, psutil  # noqa: F401
-        print("All dependencies importable.")
-    except Exception:
-        # Install into the venv if present, otherwise use current interpreter
-        print("Some dependencies are missing. Installing from requirements.txt...")
-        python_exec = get_venv_python() if os.path.exists('.venv') else sys.executable
-        if not os.path.exists('requirements.txt'):
-            print('requirements.txt not found, skipping automatic install.')
+        res = subprocess.run(check_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        if res.returncode == 0:
+            print(f"All dependencies importable in interpreter: {python_exec}")
             return
-        try:
-            subprocess.check_call([python_exec, '-m', 'pip', 'install', '-r', 'requirements.txt'])
-        except Exception as e:
-            print(f"Failed to install dependencies: {e}")
-            raise
+    except Exception:
+        pass
+
+    # If we get here, dependencies are not importable in the chosen interpreter; attempt install
+    print(f"Dependencies missing in {python_exec}. Installing from requirements.txt...")
+    if not os.path.exists('requirements.txt'):
+        print('requirements.txt not found, skipping automatic install.')
+        return
+    try:
+        subprocess.check_call([python_exec, '-m', 'pip', 'install', '-r', 'requirements.txt'])
+    except Exception as e:
+        print(f"Failed to install dependencies into {python_exec}: {e}")
+        raise
 
 def create_dirs():
     print("Creating directories...")
@@ -52,6 +58,8 @@ def create_dirs():
         os.makedirs(d, exist_ok=True)
     # Ensure img folder exists for logos, etc.
     os.makedirs(os.path.join('app', 'img'), exist_ok=True)
+    # Ensure logs directory exists for server output
+    os.makedirs(os.path.join('app', 'logs'), exist_ok=True)
 
 def create_files():
     print("Creating files...")
@@ -90,11 +98,19 @@ def run_server():
     print(f"Network: http://{ip_address}:5000")
     print("Starting server...")
     python_exec = get_venv_python() if os.path.exists('.venv') else sys.executable
+    # Replace the current process with the server process so logs and signals behave
+    # exactly as when running `python app/server.py` directly.
+    # We still print the log file location for convenience.
+    log_path = os.path.join('app', 'logs', 'server.log')
+    print(f"Server will write output to: {log_path} (server process will now start)")
+    # Ensure the environment is unbuffered so output appears promptly
+    env = os.environ.copy()
+    env['PYTHONUNBUFFERED'] = '1'
+    # Use os.execv to replace the current process
     try:
-        # Use run so the server inherits stdout/stderr; use check=True to surface errors
-        subprocess.run([python_exec, 'app/server.py'], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Server exited with error: {e}")
+        os.execv(python_exec, [python_exec, 'app/server.py'])
+    except Exception as e:
+        print(f"Failed to exec server process: {e}")
         raise
 
 

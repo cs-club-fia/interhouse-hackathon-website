@@ -13,10 +13,10 @@
     <img src="{{ url_for('img_file', filename='FIA.jpeg') }}" alt="FIA" class="top-right-logo">
     <img src="{{ url_for('img_file', filename='club_logo.png') }}" alt="CLUB_LOGO" class="club-logo">
     {% block content %}{% endblock %}
+    {% if current_user.is_authenticated and not current_user.is_admin %}
     <script>
-    // Student page-leave instrumentation
+    // Student page-leave instrumentation (only for authenticated non-admin users)
     (function(){
-        // Only send leave events for logged-in users on student pages
         // Throttle sends using sessionStorage lastLeaveSent timestamp
         function sendLeaveEvent(){
             try{
@@ -51,5 +51,6 @@
         });
     })();
     </script>
+    {% endif %}
 </body>
 </html>

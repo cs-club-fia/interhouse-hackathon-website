@@ -1,0 +1,156 @@
+Server initialized for threading.
+Initializing server...
+
+Registered routes:
+static: {'GET', 'HEAD', 'OPTIONS'} /static/<path:filename>
+login: {'GET', 'HEAD', 'OPTIONS', 'POST'} /
+dashboard: {'GET', 'HEAD', 'OPTIONS'} /dashboard
+start_test: {'GET', 'HEAD', 'OPTIONS'} /start_test
+review: {'GET', 'HEAD', 'OPTIONS'} /review
+question: {'GET', 'HEAD', 'OPTIONS', 'POST'} /question
+logout: {'OPTIONS', 'POST'} /logout
+favicon: {'GET', 'HEAD', 'OPTIONS'} /favicon.ico
+img_file: {'GET', 'HEAD', 'OPTIONS'} /img/<path:filename>
+admin_dashboard: {'GET', 'HEAD', 'OPTIONS'} /admin
+admin_stats: {'GET', 'HEAD', 'OPTIONS'} /admin/stats
+student_leave: {'OPTIONS', 'POST'} /student/leave
+admin_logout: {'OPTIONS', 'POST'} /admin/logout
+admin_download: {'GET', 'HEAD', 'OPTIONS'} /admin/download/<username>/<qname>
+reset_database: {'OPTIONS', 'POST'} /admin/reset
+view_logs: {'GET', 'HEAD', 'OPTIONS'} /admin/logs
+ * Serving Flask app 'server'
+ * Debug mode: on
+Server initialized for threading.
+Initializing server...
+
+Registered routes:
+static: {'OPTIONS', 'GET', 'HEAD'} /static/<path:filename>
+login: {'OPTIONS', 'GET', 'POST', 'HEAD'} /
+dashboard: {'OPTIONS', 'GET', 'HEAD'} /dashboard
+start_test: {'OPTIONS', 'GET', 'HEAD'} /start_test
+review: {'OPTIONS', 'GET', 'HEAD'} /review
+question: {'OPTIONS', 'GET', 'POST', 'HEAD'} /question
+logout: {'OPTIONS', 'POST'} /logout
+favicon: {'OPTIONS', 'GET', 'HEAD'} /favicon.ico
+img_file: {'OPTIONS', 'GET', 'HEAD'} /img/<path:filename>
+admin_dashboard: {'OPTIONS', 'GET', 'HEAD'} /admin
+admin_stats: {'OPTIONS', 'GET', 'HEAD'} /admin/stats
+student_leave: {'OPTIONS', 'POST'} /student/leave
+admin_logout: {'OPTIONS', 'POST'} /admin/logout
+admin_download: {'OPTIONS', 'GET', 'HEAD'} /admin/download/<username>/<qname>
+reset_database: {'OPTIONS', 'POST'} /admin/reset
+view_logs: {'OPTIONS', 'GET', 'HEAD'} /admin/logs
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+[33mPress CTRL+C to quit[0m
+Server initialized for threading.
+Initializing server...
+
+Registered routes:
+static: {'HEAD', 'OPTIONS', 'GET'} /static/<path:filename>
+login: {'HEAD', 'POST', 'OPTIONS', 'GET'} /
+dashboard: {'HEAD', 'OPTIONS', 'GET'} /dashboard
+start_test: {'HEAD', 'OPTIONS', 'GET'} /start_test
+review: {'HEAD', 'OPTIONS', 'GET'} /review
+question: {'HEAD', 'POST', 'OPTIONS', 'GET'} /question
+logout: {'POST', 'OPTIONS'} /logout
+favicon: {'HEAD', 'OPTIONS', 'GET'} /favicon.ico
+img_file: {'HEAD', 'OPTIONS', 'GET'} /img/<path:filename>
+admin_dashboard: {'HEAD', 'OPTIONS', 'GET'} /admin
+admin_stats: {'HEAD', 'OPTIONS', 'GET'} /admin/stats
+student_leave: {'POST', 'OPTIONS'} /student/leave
+admin_logout: {'POST', 'OPTIONS'} /admin/logout
+admin_download: {'HEAD', 'OPTIONS', 'GET'} /admin/download/<username>/<qname>
+reset_database: {'POST', 'OPTIONS'} /admin/reset
+view_logs: {'HEAD', 'OPTIONS', 'GET'} /admin/logs
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+[33mPress CTRL+C to quit[0m
+Server initialized for threading.
+Initializing server...
+
+Registered routes:
+static: {'OPTIONS', 'GET', 'HEAD'} /static/<path:filename>
+login: {'OPTIONS', 'POST', 'GET', 'HEAD'} /
+dashboard: {'OPTIONS', 'GET', 'HEAD'} /dashboard
+start_test: {'OPTIONS', 'GET', 'HEAD'} /start_test
+review: {'OPTIONS', 'GET', 'HEAD'} /review
+question: {'OPTIONS', 'POST', 'GET', 'HEAD'} /question
+logout: {'OPTIONS', 'POST'} /logout
+favicon: {'OPTIONS', 'GET', 'HEAD'} /favicon.ico
+img_file: {'OPTIONS', 'GET', 'HEAD'} /img/<path:filename>
+admin_dashboard: {'OPTIONS', 'GET', 'HEAD'} /admin
+admin_stats: {'OPTIONS', 'GET', 'HEAD'} /admin/stats
+student_leave: {'OPTIONS', 'POST'} /student/leave
+admin_logout: {'OPTIONS', 'POST'} /admin/logout
+admin_download: {'OPTIONS', 'GET', 'HEAD'} /admin/download/<username>/<qname>
+reset_database: {'OPTIONS', 'POST'} /admin/reset
+view_logs: {'OPTIONS', 'GET', 'HEAD'} /admin/logs
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+[33mPress CTRL+C to quit[0m
+Server initialized for threading.
+Initializing server...
+
+Registered routes:
+static: {'HEAD', 'OPTIONS', 'GET'} /static/<path:filename>
+login: {'POST', 'OPTIONS', 'GET', 'HEAD'} /
+dashboard: {'HEAD', 'OPTIONS', 'GET'} /dashboard
+start_test: {'HEAD', 'OPTIONS', 'GET'} /start_test
+review: {'HEAD', 'OPTIONS', 'GET'} /review
+question: {'POST', 'OPTIONS', 'GET', 'HEAD'} /question
+logout: {'POST', 'OPTIONS'} /logout
+favicon: {'HEAD', 'OPTIONS', 'GET'} /favicon.ico
+img_file: {'HEAD', 'OPTIONS', 'GET'} /img/<path:filename>
+admin_dashboard: {'HEAD', 'OPTIONS', 'GET'} /admin
+admin_stats: {'HEAD', 'OPTIONS', 'GET'} /admin/stats
+student_leave: {'POST', 'OPTIONS'} /student/leave
+admin_logout: {'POST', 'OPTIONS'} /admin/logout
+admin_download: {'HEAD', 'OPTIONS', 'GET'} /admin/download/<username>/<qname>
+reset_database: {'POST', 'OPTIONS'} /admin/reset
+view_logs: {'HEAD', 'OPTIONS', 'GET'} /admin/logs
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [04/Oct/2025 10:42:15] "GET / HTTP/1.1" 200 -
+192.168.0.125 - - [04/Oct/2025 10:42:15] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+127.0.0.1 - - [04/Oct/2025 10:42:15] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+192.168.0.125 - - [04/Oct/2025 10:42:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /static/timer.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /img/club_logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /img/Buildmart.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2025 10:42:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+127.0.0.1 - - [04/Oct/2025 10:42:16] "GET /img/FIA.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2025 10:42:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+127.0.0.1 - - [04/Oct/2025 10:42:23] "[31m[1mPOST /student/leave HTTP/1.1[0m" 401 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[31m[1mPOST /student/leave HTTP/1.1[0m" 401 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[32mPOST / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [04/Oct/2025 10:42:34] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+127.0.0.1 - - [04/Oct/2025 10:42:35] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+127.0.0.1 - - [04/Oct/2025 10:42:37] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+127.0.0.1 - - [04/Oct/2025 10:42:37] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
