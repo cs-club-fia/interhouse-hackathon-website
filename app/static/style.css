@@ -124,6 +124,15 @@ button:hover {
 .top-right-logo {
     right: 12px; /* space from right edge */
 }
+.club-logo{
+    position: fixed;
+    top: 130px; /* space from top edge */
+    width: 200px; /* increased 200% */
+    right: 12px;
+    height: auto;
+    border-radius: 8px;
+    z-index: 1000;
+}
 
 @media (max-width: 600px) {
     .top-left-logo, .top-right-logo { width: 104px; top: 8px; } /* increased 200% */

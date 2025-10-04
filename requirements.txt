@@ -8,3 +8,4 @@ cryptography==42.0.0
 psutil==5.9.8
 Werkzeug==3.0.1
 simple-websocket==1.0.0
+python-dotenv==1.0.0
