@@ -1,0 +1,39 @@
+Starting server...
+Traceback (most recent call last):
+  File "F:\website\app\server.py", line 8, in <module>
+    eventlet.monkey_patch()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "F:\website\.venv\Lib\site-packages\eventlet\patcher.py", line 292, in monkey_patch
+    modules_to_patch += modules_function()
+                        ~~~~~~~~~~~~~~~~^^
+  File "F:\website\.venv\Lib\site-packages\eventlet\patcher.py", line 548, in _green_thread_modules
+    from eventlet.green import threading
+  File "F:\website\.venv\Lib\site-packages\eventlet\green\threading.py", line 18, in <module>
+    eventlet.patcher.inject(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        'threading',
+        ^^^^^^^^^^^^
+        globals(),
+        ^^^^^^^^^^
+        ('_thread', thread),
+        ^^^^^^^^^^^^^^^^^^^^
+        ('time', time))
+        ^^^^^^^^^^^^^^^
+  File "F:\website\.venv\Lib\site-packages\eventlet\patcher.py", line 109, in inject
+    module = __import__(module_name, {}, {}, module_name.split('.')[:-1])
+  File "C:\Python313\Lib\threading.py", line 35, in <module>
+    _start_joinable_thread = _thread.start_joinable_thread
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'eventlet.green.thread' has no attribute 'start_joinable_thread'
+Server exited with error: Command '['.venv\\Scripts\\python.exe', 'app/server.py']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "F:\website\startup.py", line 113, in <module>
+    run_server()
+    ~~~~~~~~~~^^
+  File "F:\website\startup.py", line 95, in run_server
+    subprocess.run([python_exec, 'app/server.py'], check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['.venv\\Scripts\\python.exe', 'app/server.py']' returned non-zero exit status 1.
