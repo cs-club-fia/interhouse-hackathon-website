@@ -266,3 +266,372 @@ ModuleNotFoundError: No module named 'flask.debughelpers'
 2025-10-04 10:42:37,104 - INFO - HTTP RESPONSE: POST /student/leave -> 204 NO CONTENT to 127.0.0.1
 2025-10-04 10:42:37,108 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:37] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
 2025-10-04 10:42:37,108 - INFO - 127.0.0.1 - - [04/Oct/2025 10:42:37] "[35m[1mPOST /student/leave HTTP/1.1[0m" 204 -
+2025-10-07 13:35:16,518 - INFO - Server initialized for threading.
+2025-10-07 13:35:16,612 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-07 13:35:16,612 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-07 13:35:16,612 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-07 13:35:16,612 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-07 13:35:39,691 - INFO - HTTP REQUEST: GET / from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:39,691 - INFO - HTTP REQUEST: GET / from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:39,883 - INFO - HTTP RESPONSE: GET / -> 200 OK to 127.0.0.1
+2025-10-07 13:35:39,883 - INFO - HTTP RESPONSE: GET / -> 200 OK to 127.0.0.1
+2025-10-07 13:35:39,883 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:39] "GET / HTTP/1.1" 200 -
+2025-10-07 13:35:39,883 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:39] "GET / HTTP/1.1" 200 -
+2025-10-07 13:35:40,408 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,408 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,410 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,410 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,416 - INFO - HTTP REQUEST: GET /static/timer.js from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,416 - INFO - HTTP REQUEST: GET /static/timer.js from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,417 - INFO - HTTP REQUEST: GET /static/style.css from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,417 - INFO - HTTP REQUEST: GET /static/style.css from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,785 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:40,785 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:40,785 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:40] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:35:40,785 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:40] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:35:40,787 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:40,787 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:40,787 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:40] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:35:40,787 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:40] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:35:40,793 - INFO - HTTP REQUEST: GET /img/club_logo.png from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,793 - INFO - HTTP REQUEST: GET /img/club_logo.png from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:40,810 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:40,810 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:40,811 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:40] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:35:40,811 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:40] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:35:40,980 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:40,980 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:40,981 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:35:40,981 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:35:41,010 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:41,010 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 127.0.0.1
+2025-10-07 13:35:41,013 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:41] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:35:41,013 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:41] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:35:41,124 - INFO - HTTP REQUEST: GET /favicon.ico from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:41,124 - INFO - HTTP REQUEST: GET /favicon.ico from 127.0.0.1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:41,124 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 127.0.0.1
+2025-10-07 13:35:41,124 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 127.0.0.1
+2025-10-07 13:35:41,124 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:41] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:35:41,124 - INFO - 127.0.0.1 - - [07/Oct/2025 13:35:41] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:35:48,593 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,593 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,594 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:35:48,594 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:35:48,595 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "GET / HTTP/1.1" 200 -
+2025-10-07 13:35:48,595 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "GET / HTTP/1.1" 200 -
+2025-10-07 13:35:48,693 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,693 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,693 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,693 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,695 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,695 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,695 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,695 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,701 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,701 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,702 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,702 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,705 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,705 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,707 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,707 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,708 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,708 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,705 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,705 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,707 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,707 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,710 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,710 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,753 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,753 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,754 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,754 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:35:48,755 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,755 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:35:48,853 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,853 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:35:48,853 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:35:48,853 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:35:48,853 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:35:48,853 - INFO - 192.168.0.125 - - [07/Oct/2025 13:35:48] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:43:01,279 - INFO - Server initialized for threading.
+2025-10-07 13:43:01,322 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-07 13:43:01,322 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-07 13:43:01,324 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-07 13:43:01,324 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-07 13:43:33,222 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,222 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,226 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:43:33,226 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:43:33,227 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "GET / HTTP/1.1" 200 -
+2025-10-07 13:43:33,227 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "GET / HTTP/1.1" 200 -
+2025-10-07 13:43:33,279 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,279 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,281 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,281 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,282 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,282 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,280 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,283 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,283 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,284 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,280 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,285 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,285 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,285 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,285 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,284 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,286 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,286 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,287 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,287 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,287 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,287 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,290 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,290 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,299 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,299 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,300 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,300 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:33,301 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,301 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:43:33,336 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,336 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:33,337 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:43:33,337 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:43:33,337 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:43:33,337 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:33] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:43:43,963 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:43,963 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:43,964 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:43:43,964 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:43:43,964 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:43] "GET / HTTP/1.1" 200 -
+2025-10-07 13:43:43,964 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:43] "GET / HTTP/1.1" 200 -
+2025-10-07 13:43:44,013 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,013 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,015 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,015 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,017 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,017 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,017 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,017 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,019 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,019 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,022 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,022 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,021 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,021 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,023 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,023 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,024 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,024 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,024 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,024 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,025 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,026 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,026 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,025 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,040 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,040 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,041 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,041 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,042 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,042 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,072 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,072 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,073 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:43:44,073 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:43:44,074 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:43:44,074 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:43:44,791 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,791 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,792 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:43:44,792 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:43:44,792 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "GET / HTTP/1.1" 200 -
+2025-10-07 13:43:44,792 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "GET / HTTP/1.1" 200 -
+2025-10-07 13:43:44,839 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,839 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,841 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,841 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,843 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,843 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,840 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,840 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,843 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,843 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,845 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,845 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,844 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,844 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,845 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,845 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,845 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,845 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,847 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,847 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,847 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,847 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,848 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,848 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,864 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,864 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,865 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,865 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:44,866 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,866 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:43:44,925 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,925 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:44,925 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:43:44,925 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:43:44,926 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:43:44,926 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:43:45,260 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,260 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,260 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:43:45,260 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:43:45,267 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "GET / HTTP/1.1" 200 -
+2025-10-07 13:43:45,267 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "GET / HTTP/1.1" 200 -
+2025-10-07 13:43:45,312 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,312 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,313 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,313 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,314 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,314 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,313 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,313 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,315 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,315 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,315 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,315 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,317 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,317 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,316 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,316 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,317 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,317 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,317 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,317 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,317 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,317 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,319 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,319 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,330 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,330 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,332 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,332 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:43:45,332 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,332 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:43:45,348 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,348 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:43:45,350 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:43:45,350 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:43:45,350 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:43:45,350 - INFO - 192.168.0.125 - - [07/Oct/2025 13:43:45] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:44:16,045 - INFO - Server initialized for threading.
+2025-10-07 13:44:16,085 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-07 13:44:16,085 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.125:5000
+2025-10-07 13:44:16,085 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-07 13:44:16,085 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-07 13:44:40,060 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,060 - INFO - HTTP REQUEST: GET / from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,076 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:44:40,076 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.125
+2025-10-07 13:44:40,076 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "GET / HTTP/1.1" 200 -
+2025-10-07 13:44:40,076 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "GET / HTTP/1.1" 200 -
+2025-10-07 13:44:40,148 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,148 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,150 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,150 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,152 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,152 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,154 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,154 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,472 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,472 - INFO - HTTP RESPONSE: GET /static/timer.js -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,472 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,472 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /static/timer.js HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,510 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,510 - INFO - HTTP RESPONSE: GET /static/style.css -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,510 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,510 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,520 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,520 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,521 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,521 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,521 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,521 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /img/club_logo.png HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,572 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,572 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,572 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,572 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /img/Buildmart.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,584 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,584 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 304 NOT MODIFIED to 192.168.0.125
+2025-10-07 13:44:40,585 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,585 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[36mGET /img/FIA.jpeg HTTP/1.1[0m" 304 -
+2025-10-07 13:44:40,659 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,659 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.125 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+2025-10-07 13:44:40,659 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:44:40,659 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.125
+2025-10-07 13:44:40,659 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:44:40,659 - INFO - 192.168.0.125 - - [07/Oct/2025 13:44:40] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:45:34,831 - INFO - HTTP REQUEST: GET / from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,831 - INFO - HTTP REQUEST: GET / from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,832 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,832 - INFO - HTTP RESPONSE: GET / -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,832 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET / HTTP/1.1" 200 -
+2025-10-07 13:45:34,832 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET / HTTP/1.1" 200 -
+2025-10-07 13:45:34,910 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,910 - INFO - HTTP REQUEST: GET /static/style.css from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,910 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,910 - INFO - HTTP REQUEST: GET /static/timer.js from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,910 - INFO - HTTP RESPONSE: GET /static/style.css -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,910 - INFO - HTTP RESPONSE: GET /static/style.css -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,910 - INFO - HTTP RESPONSE: GET /static/timer.js -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,910 - INFO - HTTP RESPONSE: GET /static/timer.js -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,910 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /static/style.css HTTP/1.1" 200 -
+2025-10-07 13:45:34,910 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /static/style.css HTTP/1.1" 200 -
+2025-10-07 13:45:34,910 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /static/timer.js HTTP/1.1" 200 -
+2025-10-07 13:45:34,910 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /static/timer.js HTTP/1.1" 200 -
+2025-10-07 13:45:34,930 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,930 - INFO - HTTP REQUEST: GET /img/Buildmart.jpeg from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,931 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,931 - INFO - HTTP RESPONSE: GET /img/Buildmart.jpeg -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,933 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /img/Buildmart.jpeg HTTP/1.1" 200 -
+2025-10-07 13:45:34,933 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /img/Buildmart.jpeg HTTP/1.1" 200 -
+2025-10-07 13:45:34,938 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,938 - INFO - HTTP REQUEST: GET /img/FIA.jpeg from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,939 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,939 - INFO - HTTP RESPONSE: GET /img/FIA.jpeg -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,939 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /img/FIA.jpeg HTTP/1.1" 200 -
+2025-10-07 13:45:34,939 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /img/FIA.jpeg HTTP/1.1" 200 -
+2025-10-07 13:45:34,965 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,965 - INFO - HTTP REQUEST: GET /img/club_logo.png from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,965 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,965 - INFO - HTTP RESPONSE: GET /img/club_logo.png -> 200 OK to 192.168.0.151
+2025-10-07 13:45:34,965 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /img/club_logo.png HTTP/1.1" 200 -
+2025-10-07 13:45:34,965 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "GET /img/club_logo.png HTTP/1.1" 200 -
+2025-10-07 13:45:34,987 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,987 - INFO - HTTP REQUEST: GET /favicon.ico from 192.168.0.151 UA=Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.7390.41 Mobile/15E148 Safari/604.1
+2025-10-07 13:45:34,987 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.151
+2025-10-07 13:45:34,987 - INFO - HTTP RESPONSE: GET /favicon.ico -> 204 NO CONTENT to 192.168.0.151
+2025-10-07 13:45:34,989 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
+2025-10-07 13:45:34,989 - INFO - 192.168.0.151 - - [07/Oct/2025 13:45:34] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 204 -
