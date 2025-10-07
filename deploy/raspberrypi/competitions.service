@@ -1,0 +1,19 @@
+[Unit]
+Description=Competitions Website (startup.py)
+After=network.target
+
+[Service]
+Type=simple
+# Change User and Group if you run under a non-root account (e.g. pi)
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/competitions
+# Use the virtualenv python that startup.py expects
+ExecStart=/home/pi/competitions/.venv/bin/python /home/pi/competitions/startup.py
+# After main process starts, blink the ACT LED once for visibility
+ExecStartPost=/home/pi/competitions/.venv/bin/python /home/pi/competitions/app/pi_act_blink.py
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
